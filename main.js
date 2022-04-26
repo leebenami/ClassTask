@@ -57,9 +57,9 @@ function clean() {
 }
 
 function onWindowLoad() {
-  const calculateBtn = document.querySelector("#calculateBtn");
+  const form = document.querySelector('form');
+  form.onsubmit = validation;
   const resetBtn = document.querySelector("#resetBtn");
-  calculateBtn.onclick = validation;
   resetBtn.onclick = clean;
 }
 
